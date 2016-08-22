@@ -55,6 +55,7 @@ Use values from table below for _bluemix-api-endpoint_ and _bluemix-domain_.
     ```
     cf create-service SecureGateway securegatewayplan My-SecureGateway
     ```
+    
 2. Log into [Bluemix Dashboard](https://new-console.ng.bluemix.net/#all-items). Click on your user avatar icon located at the top right corner of the dashboard and set the _Region_, _Organization_, and _Space_ used for this deployment. From list of services double-click on __My\-SecureGateway__ service to launch the _Secure Gateway Dashboard_.
 
 3. In the _Secure Gateway Dashboard_, click _Add Gateway_. The Add Gateway page is displayed. Enter __Connect SoftLayer Devices__ in _Gateway Name_ input field.
