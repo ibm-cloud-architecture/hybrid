@@ -3,11 +3,11 @@ Instructions to deploy Orders Microservice sample hybrid application in your Blu
 
 Use values from table below for _bluemix-api-endpoint_ and _bluemix-domain_.
 
-|Region |bluemix-api-endpoint |bluemix-domain
-|-|-|
-|US South|api.ng.bluemix.net|mybluemix.net
-|London|api.eu-gb.bluemix.net|eu-gb.mybluemix.net
-|Sydney|api.au-syd.bluemix.net|au-syd.mybluemix.net
+| Region | bluemix-api-endpoint | bluemix-domain |
+| --- | --- | --- |
+| US South | api\.ng\.bluemix\.net | api\.ng\.bluemix\.net | mybluemix\.net |
+| London  | api\.eu-gb\.bluemix\.net | eu-gb\.mybluemix\.net |
+| Sydney  | api\.au-syd\.bluemix\.net | au-syd\.mybluemix\.net |
 
 #### Pre-Requisites
 * Bluemix Account to deploy the Microservice. [Sign-up here](https://new-console.ng.bluemix.net/registration/?Target=https%3A%2F%2Fnew-console.ng.bluemix.net%2Flogin%3Fstate%3D%2Fhome%2Fonboard).
