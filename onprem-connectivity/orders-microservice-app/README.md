@@ -114,7 +114,7 @@ Use values from table below for _bluemix-api-endpoint_ and _bluemix-domain_.
 1. Clone repository to your local machine.
     ```
     cd <your-working-dir>
-    git clone https://github.com/ibm-solution-engineering/hybrid.git
+    git clone https://github.com/ibm-cloud-architecture/hybrid.git
     ```
 
 2. Deploy the Orders Microservice application.
