@@ -84,8 +84,8 @@ Use values from table below for _bluemix-api-endpoint_ and _bluemix-domain_.
   - _port:_ __Port number from step 9__
   - _user:_ __orders_dbuser__
   - _password:_ __Pass4OrdersUs3r__
-  - _jdbcUrl:_ __jdbc:mysql://<Value of Cloud Host:Port from step 9>/orders__
-  - _uri:_ __mysql://<Value of Cloud Host:Port from step 9>/orders__
+  - _jdbcUrl:_ __jdbc:mysql://\<Value of Cloud Host:Port from step 9\>/orders__
+  - _uri:_ __mysql://\<Value of Cloud Host:Port from step 9\>/orders__
 
 
 #### Setup SecureGateway Client Container in SoftLayer
