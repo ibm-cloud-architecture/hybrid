@@ -1,0 +1,26 @@
+<server>
+    <featureManager>
+        <feature>javaee-7.0</feature>
+    </featureManager>
+    <cdi12 enableImplicitBeanArchives="false"/>
+    <httpEndpoint host="*" httpPort="${port}" id="defaultHttpEndpoint">
+    </httpEndpoint>
+    <webContainer extractHostHeaderPort="true" trustHostHeaderPort="true"/>
+    <httpDispatcher enableWelcomePage="false"/>
+    <applicationMonitor dropinsEnabled="false" updateTrigger="mbean"/>
+    <config updateTrigger="mbean"/>
+    <variable name="wmqJmsClient.rar.location" value="${server.config.dir}/lib/wmq.jmsra.rar"/>
+    <authData id="mq-auth-mqLightService" password="${cloud.services.mqLightService.connection.password}" user="${cloud.services.mqLightService.connection.username}"/>
+    <connectionManager id="mq-conmgr-mqLightService" maxPoolSize="10"/>
+    <dataSource id="mysql-mysql-OrdersDBService" jdbcDriverRef="mysql-driver" jndiName="jdbc/mysql-OrdersDBService" transactional="true" type="javax.sql.ConnectionPoolDataSource">
+        <properties databaseName="${cloud.services.mysql-OrdersDBService.connection.name}" id="mysql-mysql-OrdersDBService-props" password="${cloud.services.mysql-OrdersDBService.connection.password}" portNumber="${cloud.services.mysql-OrdersDBService.connection.port}" serverName="${cloud.services.mysql-OrdersDBService.connection.host}" user="${cloud.services.mysql-OrdersDBService.connection.user}"/>
+        <connectionManager id="mysql-mysql-OrdersDBService-conMgr" maxPoolSize="100"/>
+    </dataSource>
+    <jdbcDriver id="mysql-driver" javax.sql.ConnectionPoolDataSource="org.mariadb.jdbc.MySQLDataSource" javax.sql.XADataSource="org.mariadb.jdbc.MySQLDataSource" libraryRef="mysql-library"/>
+    <library id="mysql-library">
+        <fileset dir="${server.config.dir}/lib" id="mysql-fileset"/>
+    </library>
+    <executor name="Default Executor"/>
+
+    <webApplication context-root="/" id="JavaOrdersAPI" location="JavaOrdersAPI.war" name="JavaOrdersAPI"/>
+</server>
